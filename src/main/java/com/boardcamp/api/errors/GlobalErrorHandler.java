@@ -12,4 +12,14 @@ public class GlobalErrorHandler {
     public ResponseEntity<String> handleGameNameConlict(GameNameConflictError error) {
         return ResponseEntity.status(HttpStatus.CONFLICT).body(error.getMessage());
     }
+
+    @ExceptionHandler({CustomerCpfConflictError.class})
+    public ResponseEntity<String> handleCustomerCpfConflict(CustomerCpfConflictError error) {
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(error.getMessage());
+    }
+
+    @ExceptionHandler({CustomerNotFoundError.class})
+    public ResponseEntity<String> handleCustomerNotFound(CustomerNotFoundError error) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error.getMessage());
+    }
 }
