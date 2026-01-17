@@ -34,11 +34,4 @@ public class GameController {
     public ResponseEntity<Object> getGames() {
         return ResponseEntity.status(HttpStatus.OK).body(gameService.getGames());
     }
-
-
-
-
-
-
-
 }

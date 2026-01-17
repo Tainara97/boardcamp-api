@@ -41,6 +41,4 @@ public class CustomerController {
         return ResponseEntity.status(HttpStatus.OK).body(customerService.getCustomerById(id));
     }
 
-
-
 }
